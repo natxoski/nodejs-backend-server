@@ -21,7 +21,7 @@ app.use((req,res,next)=>{
 });
 
 app.use((req,res,next)=>{
-    res.render('maintenance.hbs');
+    res.render('maintenance.hbs',{ currentYear: new Date().getFullYear()} );
 });
 
 hbs.registerHelper('getCurrentYear',()=>{
